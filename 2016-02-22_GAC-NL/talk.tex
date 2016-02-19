@@ -1,5 +1,10 @@
 %!TEX program = xelatex 
 % where <program> is any of pdflatex, xelatex or lualatex
+%% 
+
+% install theme : https://github.com/matze/mtheme
+% intall fonts : http://www.carrois.com/fira-4-1/ 
+
 \documentclass[10pt]{beamer}
 
 \usetheme{metropolis}
@@ -46,7 +51,7 @@
     \only<3>{
       \begin{figure}  
         \includegraphics[height=0.45\textheight]{/Users/massin/Documents/Presentations/201511_postdoc-mun/2016-02-22_GAC-NL/material/FigA9-Upward_YLES.pdf}
-        \caption{The 2008-9 Yellostone Lake eq. swarm \cite{Massin:2013ts}.}\label{yles}
+        \caption{The 2008-9 Yellowstone Lake eq. swarm.}\label{yles}
       \end{figure} }
       
 \end{frame}
@@ -67,14 +72,15 @@
     \begin{figure}  
       \includegraphics[height=0.5\textheight]{/Users/massin/Documents/Presentations/201511_postdoc-mun/2016-02-22_GAC-NL/material/matchfilt.png}
       \includegraphics[height=0.5\textheight]{/Users/massin/Google Drive/Documents/Projects/MUN/slideshows/2016-02-14_group-meeting/materials/F1.large.jpg}
-      \caption{From picks to precise location \cite{Shelly:2013tq,Stamps:2006vb,Waldhauser:2000ur}.}\label{picklocreloc}
+      \caption{From picks to precise location \cite{Waldhauser:2000ur}.}\label{picklocreloc}
     \end{figure} }
   
+
   \only<2>{
     \begin{figure}  
-      \includegraphics[height=0.5\textheight]{/Users/massin/Documents/Presentations/201511_postdoc-mun/2016-02-22_GAC-NL/material/spectmo.pdf}
-      \includegraphics[height=0.5\textheight]{/Users/massin/Documents/Presentations/201511_postdoc-mun/2016-02-22_GAC-NL/material/full-Mo.png}
-      \caption{... to moment tensor \cite{Godano:2015ti,Shelly:2013tq}.}\label{mo}
+      % \includegraphics[height=0.5\textheight]{/Users/massin/Documents/Presentations/201511_postdoc-mun/2016-02-22_GAC-NL/material/spectmo.pdf}
+      \includegraphics[height=0.5\textheight]{/Users/massin/Documents/Presentations/201511_postdoc-mun/2016-02-22_GAC-NL/material/full-Mo.png} 
+      \caption{... to moment tensor \cite{Godano:2015ti}.}\label{mo}
     \end{figure} }
 
     \only<3>{
@@ -83,30 +89,30 @@
       \caption{... to stress change.}\label{stress}
     \end{figure} }
 
-	\only<4>{\textbf{\textit{How to use more data in source parameter analysis ? In a more direct way ?}}}
+	\only<4>{\textbf{\textit{How to use more data in source parameters analysis ? In a more direct way ?}}}
 \end{frame}
 
-\begin{frame}{Shift-\&-stack approach (or source scanning, or SSA)}
-  Hypocenter scanning \cite{Zahradnik:2015wf,Frank:2014gl,Langet:2014tq,Kao:2004dj}
+\begin{frame}{Shift \& stack approach (or source scanning or SSA)}
+  Hypocenter scanning \cite{Kao:2004dj}
 	\begin{itemize}
-		\item Grid pre-calculation of \alert{\only<1>{travel time}\only<2>{amplitudes}} for \alert{\only<1>{trial source positions}\only<2>{take off angles}},
-		\item Signal pre-processing with body-wave \alert{\only<1>{characteristic functions}\only<2>{wavelets}},
-		\item stacking using pre-defined \alert{\only<1>{travel times} \only<2>{amplitudes}}:
+		\item Grid pre-calculation of \alert{\only<1-3>{travel time}\only<4->{amplitudes}} for \alert{\only<1-3>{trial source positions}\only<4->{take off angles}},
+    \only<2->{\item Signal pre-processing with body-wave \alert{\only<1-3>{characteristic functions}\only<4->{wavelets}},}
+    \only<3->{\item stacking using pre-defined \alert{\only<1-3>{travel times} \only<4->{amplitudes}}:
 		\begin{itemize}
-			\item probability \alert{\only<1>{grid}\only<2>{sphere}},
-			\item \alert{\only<1>{centro\"{i}d}\only<2>{P-T axis}} are defined with bayesian approach.
-		\end{itemize}
+			\item probability \alert{\only<1-3>{grid}\only<4->{sphere}},
+			\item \alert{\only<1-3>{centro\"{i}d}\only<4->{P-T axis}} are defined with bayesian approach.
+		\end{itemize}}
 	\end{itemize}	
-  How \textbf{\textit{\only<1>{to explore more spaces?}\only<2>{is this better?}}}
+  \only<3>{How to \textbf{\textit{explore more spaces?}\only<4->{is this better?}}}
 
-  \only<1>{
+  \only<1-3>{
     \begin{figure}  
       \includegraphics[height=0.3\textheight]{/Users/massin/Documents/Presentations/201511_postdoc-mun/2016-02-22_GAC-NL/material/signaltocf.pdf}
-      \includegraphics[height=0.3\textheight]{/Users/massin/Documents/Presentations/201511_postdoc-mun/2016-02-22_GAC-NL/material/cf2space.pdf}
       \includegraphics[height=0.3\textheight]{/Users/massin/Documents/Presentations/201511_postdoc-mun/2016-02-22_GAC-NL/material/spaceandcf.pdf}
+      \includegraphics[height=0.3\textheight]{/Users/massin/Documents/Presentations/201511_postdoc-mun/2016-02-22_GAC-NL/material/cf2space.pdf}
       \caption{From signal to location}\label{signaltoloc}
     \end{figure} }
-  \only<2>{
+  \only<4->{
     \begin{figure}  
       \includegraphics[height=0.3\textheight]{/Users/massin/Documents/Presentations/201511_postdoc-mun/2016-02-22_GAC-NL/material/signal2wavelet.pdf}
       \includegraphics[height=0.3\textheight]{/Users/massin/Documents/Presentations/201511_postdoc-mun/2016-02-22_GAC-NL/material/waveletandspace.pdf}
@@ -176,7 +182,7 @@
   \end{figure} }
 \end{frame}
 
-\begin{frame}{Examples\only<2->{ improvements with CECM}\only<4->{ and muti-scaling}}
+\begin{frame}{Examples\only<2->{ improvements with CECM}\only<4->{ and multi-scaling}}
   % a two col frame :
   \begin{columns}[T]
     \begin{column}{.5\textwidth}
